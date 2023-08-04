@@ -1,5 +1,5 @@
-Key = "9df80gg0934fgnun03ja409jgi"
-Link = "https://link-hub.net/484850/key-scripts "
+Key = "9df80gg0934fgn"
+Link = "https://link-hub.net/484850/key-scripts"
 Script = "https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/dingus%20esp"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/FreeKeySystem/main/Lib.lua"))().Sus(Link,Script,ey)
