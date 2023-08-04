@@ -1,6 +1,9 @@
 --by milfhunert
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+local ESPSettings = { PlayerESP = { Enabled = false, TracersOn = false, BoxesOn = false, NamesOn = false, DistanceOn = false, HealthOn = false, ToolOn = false, FaceCamOn = false, Distance = 2000 }, ScrapESP = { Enabled = false, Distance = 2000, LegendaryOnly = true, RareOnly = true, GoodOnly = true, BadOnly = true }, SafeESP = { Enabled = false, Distance = 2000, BigOnly = true, SmallOnly = true }, RegisterESP = { Enabled = false, Distance = 2000 }, ESPColor = Color3.fromRGB(255, 255, 255), ToolColor = Color3.fromRGB(255, 255, 255)};
+local ESPFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/NougatBitz/Femware-Leak/main/ESP.lua", true))()
+
 local Window = Rayfield:CreateWindow({
    Name = "Phonk Scripts ",
    LoadingTitle = "phonk scripts is loaded",
@@ -11,32 +14,90 @@ local Window = Rayfield:CreateWindow({
       FileName = "Big Hub"
    }
 })
+--INFJUMP
+local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
+_G.JumpHeight = 50;
+ 
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
+ 
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
+            end
+        end)
+    end
+end)
 --tab
-local Tab = Window:CreateTab("general", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("general") 
+local Tab2 =Window:CreateTab("Other")
 --sections
 local Section = Tab:CreateSection("esp")
+local Section = Tab2:CreateSection("Other Functions")
+--toggle and buttons
+local Toggle = Tab:CreateToggle({
+	Name = "Enable Esp",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+        ESPSettings.PlayerESP.Enabled = Value
 
-local Button = Tab:CreateButton({
-   Name = "esp",
-   Callback = function()
-  while wait(0.5) do
-    for i, childrik in ipairs(workspace:GetDescendants()) do
-        if childrik:FindFirstChild("PlayerOutline") then
-            if not childrik:FindFirstChild("EspBox") then
-                if childrik ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",childrik)
-                    esp.Adornee = childrik
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(4, 5, 1)
-                    esp.Transparency = 0.65
-                    esp.Color3 = Color3.fromRGB(255,48,48)
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end  
-   end,
+    ESPFramework.Color = ESPSettings.ESPColor
+    ESPFramework.ToolColor = ESPSettings.ToolColor
+    ESPFramework.Tracers = ESPSettings.PlayerESP.TracersOn
+    ESPFramework.Names = ESPSettings.PlayerESP.NamesOn
+    ESPFramework.Boxes = ESPSettings.PlayerESP.BoxesOn
+    ESPFramework:Toggle(ESPSettings.PlayerESP.Enabled)
+	end,
 })
+local Toggle = Tab:CreateToggle({
+	Name = "Box Esp",
+	CurrentValue = false,
+	Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+        ESPSettings.PlayerESP.BoxesOn = Value
+        ESPFramework.Boxes = ESPSettings.PlayerESP.BoxesOn
+	end,
+})
+local Toggle = Tab:CreateToggle({
+	Name = "Tracer ESP",
+	CurrentValue = false,
+	Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	    ESPSettings.PlayerESP.TracersOn = Value
+    ESPFramework.Tracers = ESPSettings.PlayerESP.TracersOn
+	end,
+})
+local Toggle = Tab:CreateToggle({
+	Name = "Name ESP",
+	CurrentValue = false,
+	Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+        ESPSettings.PlayerESP.NamesOn = Value
+        ESPFramework.Names = ESPSettings.PlayerESP.NamesOn
+	end,
+})
+local Button = Tab2:CreateButton({
+	Name = "InfJump",
+	Callback = function()
 
+local function TKDWQ_fake_script() -- INFJUMP.LocalScript 
+local script = Instance.new('LocalScript', INFJUMP)
+
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+counter = 0
+
+while wait(0.1)do
+script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+ 
+counter = counter + 0.01
+end
+end
+coroutine.wrap(TKDWQ_fake_script)()
+	end,
+})
