@@ -35,9 +35,12 @@ end)
 --tab
 local Tab = Window:CreateTab("general") 
 local Tab2 =Window:CreateTab("Other")
+local Tab3 = Window:CreateTab("Credits")
 --sections
 local Section = Tab:CreateSection("esp")
 local Section = Tab2:CreateSection("Other Functions")
+local Section = Tab3:CreateSection("Credits")
+
 --toggle and buttons
 local Toggle = Tab:CreateToggle({
 	Name = "Enable Esp",
@@ -82,7 +85,7 @@ local Toggle = Tab:CreateToggle({
 	end,
 })
 local Button = Tab2:CreateButton({
-	Name = "InfJump",
+	Name = "InfJump [NOT WORKING]",
 	Callback = function()
 
 local function TKDWQ_fake_script() -- INFJUMP.LocalScript 
@@ -100,4 +103,80 @@ end
 end
 coroutine.wrap(TKDWQ_fake_script)()
 	end,
+})
+
+local Button = Tab2:CreateButton({
+	Name = "noclip [Press 'N']",
+	Callback = function()
+
+local player = game.Players.LocalPlayer -- Получаем локального игрока
+local character = player.Character -- Получаем персонаж игрока
+
+local function enableNoclip()
+    for _, part in pairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = false -- Отключаем коллизии для всех частей персонажа
+        end
+    end
+end
+
+local function disableNoclip()
+    for _, part in pairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = true -- Включаем коллизии для всех частей персонажа
+        end
+    end
+end
+
+local noclipEnabled = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent then
+        if input.KeyCode == Enum.KeyCode.N then -- Можете использовать другую клавишу по желанию
+            noclipEnabled = not noclipEnabled -- Инвертируем состояние noclip
+            if noclipEnabled then
+                enableNoclip()
+            else
+                disableNoclip()
+            end
+        end
+    end
+end)
+end,
+})
+local Button = Tab2:CreateButton({
+	Name = "Fly [Press 'E']",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+
+    end,
+})
+
+local Button = Tab3:CreateButton({
+	Name = "Discord Server",
+	Callback = function()
+       setclipboard('https://discord.gg/rX2wSwPvbB')
+
+    end,
+})
+local Button = Tab3:CreateButton({
+	Name = "ScriptBlox",
+	Callback = function()
+       setclipboard('https://scriptblox.com/u/Kargoligach')
+
+    end,
+})
+local Button = Tab3:CreateButton({
+	Name = "ScriptBlox",
+	Callback = function()
+       setclipboard('https://scriptblox.com/u/Kargoligach')
+
+    end,
+})
+
+local Button = Tab3:CreateButton({
+	Name = "Destroy UI ",
+	Callback = function()
+       Rayfield:Destroy()
+    end,
 })
