@@ -1,0 +1,511 @@
+--pushsimulaotr
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Phonk Scripts ",
+    LoadingTitle = "phonk scripts is loaded",
+    LoadingSubtitle = "by milfhunter",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    }
+ })
+--tabs
+ local Tab = Window:CreateTab("AutoFarm")
+ local Tab2 = Window:CreateTab("AutoHatch")
+
+ --sections
+local Section = Tab:CreateSection("Power")
+
+local Toggle = Tab:CreateToggle({
+    Name = "AutoPower",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(state)
+    if state then
+         _G.loop = true
+         while _G.loop == true do wait()      
+            game:GetService("ReplicatedStorage").Remotes.PowerGain:FireServer()
+         end
+     else
+         _G.loop = false
+         game:GetService("ReplicatedStorage").Remotes.PowerGain:FireServer()
+   end
+end
+ })
+ local Toggle = Tab:CreateToggle({
+    Name = "AutoRebith",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(state)
+    if state then
+         _G.loop = true
+         while _G.loop == true do wait()      
+           game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
+         end
+     else
+         _G.loop = false
+
+    game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
+   end
+end
+ })
+
+local Section3 = Tab2:CreateSection('Forest EGG')
+
+ local Toggle = Tab2:CreateToggle({
+    Name = "Basic EGG",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(state)
+    if state then
+         _G.loop = true
+         while _G.loop == true do wait()      
+            local ohString1 = "Hatch1"
+            local ohString2 = "Basic"
+            local ohTable3 = {}
+            
+            game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+         end
+     else
+         _G.loop = false
+         local ohString1 = "Hatch1"
+         local ohString2 = "Basic"
+         local ohTable3 = {}
+         
+         game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+   end
+   end
+ })
+
+ local Toggle = Tab2:CreateToggle({
+   Name = "Devious EGG",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+        while _G.loop == true do wait()      
+
+local ohString1 = "Hatch1"
+local ohString2 = "Devious"
+local ohTable3 = {}
+
+game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+        end
+    else
+        _G.loop = false
+local ohString1 = "Hatch1"
+local ohString2 = "Devious"
+local ohTable3 = {}
+
+game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+  end
+  end
+})
+
+ local Toggle = Tab2:CreateToggle({
+   Name = "Lava EGG",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+        while _G.loop == true do wait()      
+
+local ohString1 = "Hatch1"
+local ohString2 = "Lava"
+local ohTable3 = {}
+
+game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+        end
+    else
+        _G.loop = false
+
+local ohString1 = "Hatch1"
+local ohString2 = "Lava"
+local ohTable3 = {}
+
+game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+  end
+  end
+})
+
+local Section3 = Tab2:CreateSection('Beach EGG')
+
+local Toggle = Tab2:CreateToggle({
+   Name = "Pirate EGG",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+        while _G.loop == true do wait()      
+
+         local ohString1 = "Hatch1"
+         local ohString2 = "Pirate"
+         local ohTable3 = {}
+         
+         game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+        end
+    else
+        _G.loop = false
+
+        local ohString1 = "Hatch1"
+        local ohString2 = "Pirate"
+        local ohTable3 = {}
+        
+        game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+  end
+  end
+})
+
+local Toggle = Tab2:CreateToggle({
+   Name = "Viking EGG",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+        while _G.loop == true do wait()      
+
+         local ohString1 = "Hatch1"
+         local ohString2 = "Viking"
+         local ohTable3 = {}
+         
+         game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+        end
+    else
+        _G.loop = false
+
+        local ohString1 = "Hatch1"
+        local ohString2 = "Viking"
+        local ohTable3 = {}
+        
+        game:GetService("ReplicatedStorage").Remotes.Hatch:FireServer(ohString1, ohString2, ohTable3)
+  end
+  end
+})
+
+
+ local Section2 =Tab:CreateSection("Auto Push")
+
+ local Toggle = Tab:CreateToggle({
+    Name = "AutoPushGain",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(state)
+    if state then
+         _G.loop = true
+         while _G.loop == true do wait()      
+
+         game:GetService("ReplicatedStorage").Remotes.PushGain:FireServer()
+         end
+     else
+         _G.loop = false
+
+         game:GetService("ReplicatedStorage").Remotes.PushGain:FireServer()
+   end
+end
+ })
+
+local sections = Tab:CreateSection("Forest")
+
+ local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Pink Dolly",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_1.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_1.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+       
+  end
+end
+})
+
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Evil Professor",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_2.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_2.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+
+  end
+end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush The Witch",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_3.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_3.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+
+  end
+end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Purplex",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_4.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_4.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+
+  end
+end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Daang Son",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_5.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Forest.Levels.Level_5.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+
+  end
+end
+end
+})
+
+
+local sections = Tab:CreateSection("Beach")
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Jack",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_1.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_1.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+       
+  end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Shipper",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_2.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_2.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+  end
+end
+})
+
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Captain Notooth",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_3.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_3.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+  end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush Barrito",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+         local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_4.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_4.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+  end
+end
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "AutoPush SoulCard",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+   if state then
+        _G.loop = true
+
+        while _G.loop == true do wait()      
+
+         local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_5.Spawner
+         local ohNumber2 = 5.373063564300537
+         local ohString3 = "Simulate"
+         
+         game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+        end
+    else
+        _G.loop = false
+
+        local ohInstance1 = workspace.Map.Worlds.Beach.Levels.Level_5.Spawner
+        local ohNumber2 = 5.373063564300537
+        local ohString3 = "Simulate"
+        
+        game:GetService("ReplicatedStorage").Remotes.Push:FireServer(ohInstance1, ohNumber2, ohString3)
+  end
+end
+})
