@@ -1,5 +1,5 @@
 if game.PlaceId == 13924946576 then
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/random/main/.x.vr.e.hi/snoday.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/dingus%20esp"))()
   elseif game.PlaceId == 13681795330 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/pushsimulator"))()
 end
