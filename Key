@@ -1,5 +1,5 @@
 Key = "WX5P4vfiHB"
-Link = "https://direct-link.net/484850/key-scripts1"
+Link = "https://link-hub.net/484850/key-scripts"
 Script = "https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/game%20protect"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/FreeKeySystem/main/Lib.lua"))().Sus(Link,Script,Key)
