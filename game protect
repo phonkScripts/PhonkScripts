@@ -3,6 +3,6 @@ if game.PlaceId == 13924946576 then
   elseif game.PlaceId == 13681795330 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/pushsimulator"))()
  elseif game.PlaceId == 13176434406 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/pushsimulator"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/missle%20simulator"))()
 end
   
