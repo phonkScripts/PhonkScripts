@@ -1,14 +1,7 @@
-local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
-KeySystemUI.New({
-    ApplicationName = "PhonkScripts", -- Your Key System Application Name
-    Name = "Phonk Script's", -- Your Script name
-    Info = "Join discord to get more news about scripts", -- Info text in the GUI, keep empty for default text.
-    DiscordInvite = "https://discord.gg/uubD6jHH9F" -- Optional.
-})
-repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
-if KeySystemUI.Finished() and KeySystemUI.Closed == false then
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/game%20protect"))()
-   print("key is valid")
-else
-    print("Player closed the GUI.")
-end
+
+Key = "be167a745f3d4631a02b75086056376b "-- Put here key or raw link on key. Example: "https://1.kelprepl.repl.co/example", "Key_13904293482"
+Link = "https://direct-link.net/484850/fixed-system "-- Put here link. Example: "https://1.kelprepl.repl.co/example", "https://bit.ly/example"
+Script = "https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/game%20protect"-- Put here your script link. Example: "https://pastebin.com/raw/example"
+
+--! DON'T TOUCH ANYTHING BELOW !--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/FreeKeySystem/main/Lib.lua"))().Sus(Link,Script,Key)
