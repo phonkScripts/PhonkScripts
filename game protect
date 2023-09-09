@@ -7,7 +7,7 @@ if game.PlaceId == 13924946576 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/missle%20simulator"))()
  elseif game.PlaceId == 14330243992 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/power%20slap%20sim"))()
-elfseif game.PlaceId == 4639625707 then 
+ elseif game.PlaceId == 4639625707 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/wartycoon"))()
 end
   
