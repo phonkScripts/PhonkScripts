@@ -10,7 +10,7 @@ KeySystemUI.New({
 })
 repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
 if KeySystemUI.Finished() and KeySystemUI.Closed == false then
-    print("Script loading")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/phonkScripts/PhonkScripts/main/wartycoon"))()
 else
     print("Player closed the GUI.")
 end
